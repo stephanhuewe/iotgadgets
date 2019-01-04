@@ -24,7 +24,7 @@ def CheckUserExists(user):
 # In einer Endlosschleife prüfen wir nun, ob etwas über den Fingerprinter
 # ankommt
 while True:
-    #Wir lesen 7 Byte
+    # Wir lesen 7 Byte
 	reading = ser.read(7)
 
     # Schneiden mögliche Leerzeichen weg
@@ -41,11 +41,11 @@ while True:
 
         # Mit diesem Aufruf stellen wir das Schloss auf „offen“, sofern
         # abgeschlossen war
-		f = urllib2.urlopen('http://xxx:8080/lockAction?nukiId=4711&action=1&token=abc')
+	f = urllib2.urlopen('http://xxx:8080/lockAction?nukiId=4711&action=1&token=abc')
 
         # Ausgabe der Rückgabe
         print(f.read(100))
 
         g = urllib2.urlopen('http://xxx:8080/lockAction?nukiId=4711&action=3&token=abc')
         # Ausgabe der Rückgabe
-        print( g.read(100))
+        print(g.read(100))
