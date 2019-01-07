@@ -37,7 +37,7 @@ Time  t;
 void setup() {
   rtc.begin();
 
-  // Sollten wir die Zeit und das Datum initial einmal setzen m?ssen, k?nnen
+  // Sollten wir die Zeit und das Datum initial einmal setzen müssen, können
   // wir das mit den folgenden Befehlen tun.
   // Diesen lassen wir aktuell auskommentiert
   // rtc.setTime(16, 18, 0);   // Damit setzen wir die Zeit auf 16:18:00 Uhr
@@ -49,13 +49,13 @@ void setup() {
   strip.show();
 
   // Zum Schluss initialisieren wir noch unseren Zufallszahlen-Generator
-  // Diesen ben?tigen wir für die zufällige Wahl der Farbe, die die LEDs
+  // Diesen benötigen wir für die zufällige Wahl der Farbe, die die LEDs
   // anzeigen werden
   randomSeed(42); 
 
 }
 
-// F?llt alle LEDs mit der gesetzten Farbe
+// Füllt alle LEDs mit der gesetzten Farbe
 void colorWipe(uint32_t c, uint8_t wait) 
 {
    int i;
@@ -93,7 +93,7 @@ void ShowTime(int hour, int minute)
 {
   // Nachfolgend haben wir alle Worte in Form von LED-Positionen in Arrays
   // gespeichert, je nachdem wie ihr den LED-Strang verlegt habt, können
-  // sich hier Abweichtungen ergeben
+  // sich hier Abweichungen ergeben
   int es[] = {1, 2};
   int ist[] = {4, 5, 6};
   int fuenf[] = {8, 9, 10, 11};
