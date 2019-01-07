@@ -15,11 +15,11 @@ dbfile = 'database.txt'
 # Diese Funktion öffnet unsere „Benutzerdatenbank“ und prüft, ob der
 # Fingerabdruck darin enthalten ist
 def CheckUserExists(user):
-       with open(dbfile, 'r') as file:
-            if re.search('^{0}$'.format(re.escape(user)), file.read(), flags=re.M):
-                return True
-            else:
-              return False
+    with open(dbfile, 'r') as file:
+        if re.search('^{0}$'.format(re.escape(user)), file.read(), flags=re.M):
+            return True
+        else:
+            return False
 
 # In einer Endlosschleife prüfen wir nun, ob etwas über den Fingerprinter
 # ankommt
