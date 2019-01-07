@@ -148,12 +148,12 @@ void setup() {
   Serial.println();
   randomSeed(analogRead(0));
 
-	// The ESP is capable of rendering 60fps in 80Mhz mode
-	// but that won't give you much time for anything else
-	// run it in 160Mhz mode or just set it to 30 fps
+  // The ESP is capable of rendering 60fps in 80Mhz mode
+  // but that won't give you much time for anything else
+  // run it in 160Mhz mode or just set it to 30 fps
   ui.setTargetFPS(60);
 
-	// Customize the active and inactive symbol
+  // Customize the active and inactive symbol
   ui.setActiveSymbol(activeSymbol);
   ui.setInactiveSymbol(inactiveSymbol);
 
