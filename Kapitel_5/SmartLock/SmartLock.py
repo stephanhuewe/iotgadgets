@@ -25,23 +25,23 @@ def CheckUserExists(user):
 # ankommt
 while True:
     # Wir lesen 7 Byte
-	reading = ser.read(7)
+    reading = ser.read(7)
 
     # Schneiden mögliche Leerzeichen weg
-	reading = reading.strip()
+    reading = reading.strip()
 
     # Leeren den Einlesepuffer
-	ser.flush()
+    ser.flush()
 
     # Zur Sicherheit geben wir das Gelesene auf der Konsole aus
-	print(reading)
+    print(reading)
 
     # Wenn der Benutzer gefunden wurde, öffnen wir die Türe
-	if CheckUserExists(reading):
+    if CheckUserExists(reading):
 
         # Mit diesem Aufruf stellen wir das Schloss auf „offen“, sofern
         # abgeschlossen war
-	f = urllib2.urlopen('http://xxx:8080/lockAction?nukiId=4711&action=1&token=abc')
+        f = urllib2.urlopen('http://xxx:8080/lockAction?nukiId=4711&action=1&token=abc')
 
         # Ausgabe der Rückgabe
         print(f.read(100))
